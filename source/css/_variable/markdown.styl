@@ -1,0 +1,159 @@
+h1, h2, h3, h4, h5, h6 {
+    font-family: $font-family-title;
+	font-weight: 700;
+	color: $color-font;
+    -webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+h2 {
+    font-weight: bold;
+    font-size: 27px;
+    padding: 1.6rem 0 .1rem 0;
+    margin: 0;
+    border-bottom: 2px dotted $color-font;
+	text-align: center;
+}
+
+h3 {
+    font-weight: bold;
+    font-size: 24px;
+    padding: 1rem 0 0 .1rem;
+    margin: 0;
+}
+
+h4 {
+    font-size: 22px;
+    padding: .6rem 0 0 .2rem;
+    margin: 0;
+}
+
+h5 {
+    font-size: 20px;
+    padding: .45rem 0 0 .2rem;
+    margin: 0;
+}
+
+h6 {
+    font-size: 18px;
+    padding: .3rem 0 0 .6rem;
+    margin: 0;
+	line-height: 1rem;
+}
+	
+p, summary, center {
+	font-family: $font-family-post;
+	font-size: 17px;
+	font-weight: 400;
+	color: $color-font;
+	animation:fadein .2s ease-in;
+	-webkit-animation:fadein .2s ease-in;
+	-moz-animation:fadein .2s ease-in;
+	-o-animation:fadein .2s ease-in;
+	-ms-animation:fadein .2s ease-in;
+}
+
+hr { 
+    display: block; 
+    height: 2px; border: 0; 
+    border-top: 1px dotted $color-font;
+    margin: 1.4rem 0 1.2rem 0; 
+    padding: 0; 
+}
+
+del {
+	opacity: 0.6;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+blockquote{
+    color: $color-font;
+    margin: 0 1rem 0 .2rem;
+    padding: 0 0 0 1.4rem;
+    border-left: 1px $color-font dashed;
+	animation:fadein .2s ease-in;
+	-webkit-animation:fadein .2s ease-in;
+	-moz-animation:fadein .2s ease-in;
+	-o-animation:fadein .2s ease-in;
+	-ms-animation:fadein .2s ease-in;
+	opacity: 0.6;
+
+	&:hover {
+		opacity: 1;
+	}
+}
+
+table {
+	margin: auto;
+    border-collapse: collapse;
+    font-family: $font-family-post;
+    font-size: 17px;
+    line-height: 2.2rem;
+    font-weight: 400;
+    border: 1px solid $color-font;
+	background-color: rgba($color-block, 0.1);
+	table-layout: fixed;
+	color: $color-font;
+	animation:fadein .2s ease-in;
+	-webkit-animation:fadein .2s ease-in;
+	-moz-animation:fadein .2s ease-in;
+	-o-animation:fadein .2s ease-in;
+	-ms-animation:fadein .2s ease-in;
+}
+
+th, td,{
+	overflow: auto;
+    padding: .4rem .8rem;
+    border-right: 1px solid $color-font;
+    border-top: 1px solid $color-font; 
+	word-break: break-all; 
+	word-wrap:break-word;
+	color: $color-font;
+}
+
+thead {
+	overflow: auto;
+    background-color: rgba($color-block, 0.1);
+}
+
+b, strong { 
+    font-weight: bold; 
+}
+
+dfn { 
+    font-style: italic; 
+}
+
+pre {
+	overflow: auto;
+	max-height: 20rem;
+	background-color: rgba($color-block, 0.1);
+	border: 1px dashed $color-font;
+	padding: .4rem 1.2rem;
+}
+
+code {
+	font-size: 16px;
+	color: $color-font;
+}
+
+::selection { 
+	background: $color-hover; 
+	color: $white;
+}
+
+::-moz-selection { 
+	background: $color-hover;
+	color: $white;
+}
+
+a, button, input {
+	cursor: url($cursor-pointer),auto !important;
+}
+
+textarea {
+	cursor: url($cursor-text),auto !important;
+}

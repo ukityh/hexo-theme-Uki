@@ -1,0 +1,75 @@
+<% if ( is_home() && page.current == 1 ) { %>
+	<%- partial('_partial/header') %>
+<% } %>
+
+<div class="aside">
+	<%- partial('_partial/_sidebar/sidebar') %>
+</div>
+
+<div class="index-content">
+	
+	<div class="mainpage-Ukitopia">
+		<center><span>Would you like to visit my world?</span></center>
+		<div class="mainpage-post-title">
+			<a class="post-title-link" href="/Ukitopia"><strong>"Welcome to Ukitopia"</strong></a></div>
+	</div>
+	
+	<section class="post">
+		<% page.posts.each(function (post) { %>
+		<% if(post.index != false) { %>
+			<article class="mainpage-posts">
+				<% if (post.categories && post.categories.length){ %>
+				<span class="mainpage-post-category">
+					<i style="font-size:17px;" class="iconfont icon-bookmark"></i>
+					<% var categoryPath = []%>
+					<% post.categories.forEach(function(category, i){ categoryPath.push(category.name)%>
+					<span class="mpcategory-name"><%=category.name%></span><% if (i !== post.categories.length - 1) { %> <% if (theme.category && theme.category.sub) {%>><%} else {%>-<%}%> <% } %>
+					<% }) %>
+				</span>
+				<% } %>
+			
+				<div class="mainpage-post-title" style="font-size:30px; font-weight:bold">
+					<% if(post.top) { %>
+					<i style="font-size:28px; font-weight:bold; color:#D24646;" class="iconfont icon-top"></i>
+					<a class="post-title-link" href="<%- url_for(post.path) %>"><%= post.title %></a>
+					<% } else { %>
+					<a class="post-title-link" href="<%- url_for(post.path) %>">
+					<%= post.title %></a>
+					<% } %>
+				</div>
+				
+				<div class="mpbreakup"><i style="font-size:15px; font-weight:bold;" class="iconfont icon-breakup"></i></div>
+
+				<div class="mainpage-post-meta"> 
+					<i style="font-size:16px; font-weight:bold;" class="iconfont icon-calendar"></i>
+					 <%- date(post.date, "YYYY-MM-DD") %>
+					-
+					<i style="font-size:16px; font-weight:bold;" class="iconfont icon-calendar"></i>
+					<%- date(post.updated, "YYYY-MM-DD") %>
+				</div>
+
+				<div class="mainpage-post-content">     
+					<%- post.excerpt %>        
+				</div>
+				
+				<div class="mhr"><hr></div>
+				
+				<% if (post.tags && post.tags.length){ %>
+				<span class="mainpage-post-tag">
+					<% post.tags.forEach(function(tag, i){ %>
+						<span class="mptag-name"><i style="font-size:14px;" class="iconfont icon-tag"></i><%= tag.name %></span>
+					<% }) %>
+				</span>
+				<% } %>
+		
+			</article>
+			<% } %>
+		<% }) %>
+			
+	</section>
+	<%- partial('_partial/paginator') %>
+</div>
+
+<div class="index-right">
+	<%- partial('_partial/_sidebar/right') %>
+</div>

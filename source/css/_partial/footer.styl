@@ -1,0 +1,46 @@
+.footer {
+    padding: 2rem 0 .3rem 0;
+    text-align: center;
+    clear: both;
+	opacity: 0.9;
+	font-weight: 200;
+	max-width: 50%;
+	margin: auto;
+	
+	@media screen and (max-width: 1024px) {
+		max-width: 100%;
+	}
+	
+	a {
+		color: $color-font;
+		text-decoration: none;
+		transition-duration: .3s;
+	}
+	
+	a:hover {
+	    color: $color-hover;
+	}
+	
+	a:active{ 
+	    color: $color-active
+	}
+	
+	p {
+		margin: .2rem;
+	}
+}
+
+.beian-link {
+	font-size: 17px;
+	font-family: $font-family-post;
+	
+	&:hover {
+		color: $color-hover;
+	}
+}
+
+#timer-d, #timer-h, #timer-m, #timer-s, .footer-p {
+	font-size: 15px;
+	font-family: $font-family-post;
+	font-weight: 100;
+}

@@ -1,0 +1,24 @@
+@import '_partial/pagination.styl'
+@import '_partial/footer.styl'
+@import '_partial/sidebar.styl'
+@import '_partial/side-right.styl'
+@import '_partial/comment.styl'
+
+/* 音乐播放器 */
+.media {
+	opacity:0.8;
+}
+
+.aplayer, 
+.aplayer .aplayer-info .aplayer-music {
+	cursor: url($cursor-normal),auto !important;
+}
+
+.aplayer.aplayer-withlrc .aplayer-pic,
+.aplayer .aplayer-list ol li {
+	cursor: url($cursor-pointer),auto !important;
+}
+
+.aplayer-list-title {
+	color: $black ;
+}

@@ -1,0 +1,30 @@
+<div class="aside">
+	<%- partial('_partial/_sidebar/sidebar') %>
+</div>
+
+<div class="content">
+	<section class="archive">
+	<div class="page-title"><i style="font-size:32px;font-weight:400" class="iconfont icon-archive"></i>&ensp;文章列表</div>
+	<div class="archive-descr">按更新日期排序</div>
+		<ul class="archive-post">
+			<% var year; %>
+			<% page.posts.each(function(post, i) { %>
+			<% if (year != post.updated.year()) { %>
+				<% year = post.updated.year(); %>
+					<div class="archives-year">
+						<div class="archive-year-item">
+							<%= post.updated.year() %>
+						</div>
+					</div>
+			<% } %>
+			<li class="archive-post-item">
+				<div class="pen">_<i style="font-size: 17px;"class="iconfont icon-pen"></i>
+				<span class="archive-post-date"><%= date(post.updated, "MM-DD") %></span>
+				<a class="archive-post-title" href="<%- url_for(post.path) %>"><%= post.title %></a>
+				</div>
+			</li>
+			<% }) %>
+		</ul>
+	</section>
+	<%- partial('_partial/paginator') %>
+</div>

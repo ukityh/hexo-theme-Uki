@@ -1,0 +1,12 @@
+<% if(theme.gitalk.use == true) { %>
+	<div id="gitalk-container">
+		<%- partial('../_widget/gitalk') %>
+	</div>
+<% } %>
+
+
+<% if(theme.valine.use == true) { %>
+	<div id="vcomments">
+		<%- partial('../_widget/valine') %>
+	</div>
+<% } %>

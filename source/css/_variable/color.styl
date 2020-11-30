@@ -1,0 +1,24 @@
+$white                = #F5F5F5
+$black                = #2D2D2D
+
+$color-hover          = #64B4A0
+$color-active         =	#008B8B
+$color-link           = $color-link-light
+
+$color-block          = $white
+$color-font           = $black
+$color-link-light     = #1E6E78
+$color-link-dark      = #1E90FF
+
+if (hexo-config('background.dark.enable')) {
+	$color-link       = $color-link-dark
+	$color-block      = $black
+	$color-font       = $white
+}
+
+
+
+// config-opacity
+$header-menu-opacity = hexo-config('background.menu-opacity');
+$post-block-opacity = hexo-config('background.block-opacity');
+$post-hover-opacity = hexo-config('background.hover-opacity');

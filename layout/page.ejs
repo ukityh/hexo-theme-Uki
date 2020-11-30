@@ -1,0 +1,29 @@
+<div class="aside">
+	<nav class="sidebar">
+		<%- partial('_partial/_sidebar/sidebar') %>
+	</nav>
+</div>
+
+<div class="content">
+	<div class="page-main">
+		
+		<center class="pagetitle"><h1><%= page.title %><br><i style="font-size:16px;position:relative;bottom:7px;" class="iconfont icon-breakup"></i></h1></center>
+		
+		<% if(page.layout == 'say') { %>
+			<%- partial('_partial/_page/artitalk') %>
+		<% } else { %>
+			<%- page.content %>
+		<% } %>
+			
+		<% if(page.comment == true) { %>
+		  <%- partial('_partial/_post/comment') %>
+		<% } %>
+			
+	</div>
+</div>
+
+<% if(page.noCopy == true){ %>
+
+	<%- js('//cdn.jsdelivr.net/gh/ukityh/ukityh.github.io@master/js/nocopy.js') %>
+	
+<% } %>

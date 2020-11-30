@@ -1,0 +1,238 @@
+/* Artitalk */
+#artitalk_main {
+	position: relative;
+	right: 2.6%;
+	margin: auto;
+}
+
+#artitalk_main svg {
+    cursor: url($cursor-pointer),auto !important;
+}
+
+#artitalk_main .cbp_tmtimeline>li:nth-child(odd) .cbp_tmlabel {
+	line-height: 1.4rem !important;
+	padding: .2em 1em 0 !important;
+	left: 2.5%;
+	word-break: break-all;
+	word-wrap:break-word;
+	margin: 0 0 2rem 65px !important;
+	
+	@media screen and (max-width: 600px) {
+		left: 1.7%;
+	}
+}
+
+
+.cbp_tmtimeline>li .cbp_tmlabel {
+	line-height: 1.4rem !important;
+	padding: .2em 1em 0 !important;
+	left: 2.5%;
+	word-break: break-all;
+	word-wrap:break-word;
+	margin: 0 0 2rem 65px !important;
+	
+	@media screen and (max-width: 600px) {
+		left: 1.7%;
+	}
+}
+
+
+#operare_artitalk .at_button, #artitalk_main .at_button {
+	color: $color-font !important;
+	padding: .2rem .4rem !important;
+	box-shadow: 0px 0px 1px rgba($black, 0.3);
+	transition-duration: .4s;
+	opacity: 0.6;
+	
+	&:hover {
+		opacity: 0.8;
+	}
+	
+	&:active {
+		opacity: 1;
+	}
+}
+
+#artitalk_main #shuoshuo_content {
+	padding: 0 !important;
+}
+
+#artitalk_main .power {
+	line-height: 1.2rem;
+}
+
+#artitalk_main .power a {
+	font-size: .8rem !important;
+	cursor: url($cursor-pointer),auto !important;
+}
+
+#artitalk_main p.shuoshuo_time {
+    padding-top: .2rem !important;
+	border-top: 1px dashed rgba($color-font,0.3) !important;
+}
+
+#artitalk_main .shuoshuo_author_img img {
+	height: 4rem;
+	width: 4rem;
+	position: relative;
+	bottom: .8rem;
+	right: .5%;
+	
+	@media screen and (max-width: 1000px) {
+		height: 3.4rem;
+		width: 3.4rem;
+		right: 0;
+		bottom: .5rem;
+	}
+	
+	@media screen and (max-width: 600px) {
+		height: 3.2rem;
+		width: 3.2rem;
+		left: .3%;
+	}
+}
+
+#artitalk_main .shuoshuo_text {
+	border: 1px solid $black !important;
+	color: $black !important;
+	background-image: url(//cdn.jsdelivr.net/gh/ukityh/ukityh.github.io@master/imgs/saybg.png) !important;
+}
+
+textarea {
+	font: 400 17px $font-family-post;
+}
+
+/* Gallery */
+.gallery-list {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	align-items: flex-start;
+	text-align: center;
+	
+	.gallery-column {
+		max-width: 34%;
+	}
+	
+	img {
+		width: 100rem;  
+		height: auto;  
+		max-width: 94%;  
+		max-height: 100%; 
+		border: 1px solid rgba($white, 0.6);
+		box-shadow: 0px 0px 2rem rgba($black 0.4);
+		opacity: 0.8;
+		
+		&:hover {
+			opacity: 1;
+			transform: scale(1)
+			-webkit-transform: scale(1)
+			-ms-transform: scale(1)
+			-o-transform: scale(1)
+		}
+	}
+}
+
+/* 友情链接 */
+
+.friends-links {
+	text-align: center;
+}
+
+.imghvr-hinge-up {
+	border-radius: 100%;
+	position: relative;
+	display: inline-block;
+	margin: 0 10px;
+	width: 10rem;
+	height: 10rem;
+	overflow: hidden;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-moz-osx-font-smoothing: grayscale;
+	-webkit-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-perspective: 50em;
+	perspective: 50em;
+	cursor: pointer;
+	text-align: center;
+	opacity: 0.93;
+	cursor: url($cursor-pointer),auto !important;
+
+	h3 {
+		font-size: 22px;
+		color: $white;
+	}
+	
+	
+	@media screen and (max-width: 1024px) {
+		width: 9rem;
+		height: 9rem;
+		
+		h3 {
+			font-size: 18px;
+			color: $white;
+		}
+	}
+
+	img {
+		border-radius: 100%;
+		vertical-align: top;
+		max-width: 100%;  
+		-webkit-transform-origin: 50% 0%;
+		-ms-transform-origin: 50% 0%;
+		transform-origin: 50% 0%;
+	}
+
+	figcaption {
+		background-color: inherit;
+		padding: 30px;
+		position: absolute;
+		top: 0;
+		bottom: 0;
+		left: 0;
+		right: 0;
+		opacity: 0;
+		z-index: 1;
+		-webkit-transform: rotateX(90deg);
+		transform: rotateX(90deg);
+		-webkit-transform-origin: 50% 100%;
+		-ms-transform-origin: 50% 100%;
+		transform-origin: 50% 100%;
+	}
+
+	&:hover {
+		opacity: 1;
+		transform: scale(1.05)
+		-webkit-transform: scale(1.05)
+		-ms-transform: scale(1.05)
+		-o-transform: scale(1.05)
+		
+		img {
+			opacity: 0;
+			-webkit-transform: rotateX(-90deg);
+			transform: rotateX(-90deg);
+		}
+
+		figcaption {
+			opacity: 1;
+			-webkit-transition-delay: 0.2s;
+			transition-delay: 0.2s;
+			-webkit-transform: rotateX(0deg);
+			transform: rotateX(0deg);
+		}
+	}
+}
+
+.imghvr-hinge-up 
+.imghvr-hinge-up,
+.imghvr-hinge-up:before,
+.imghvr-hinge-up:after,
+.imghvr-hinge-up *,
+.imghvr-hinge-up *:before,
+.imghvr-hinge-up *:after, {
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+	-webkit-transition: all 0.35s ease;
+	transition: all 0.35s ease;
+}

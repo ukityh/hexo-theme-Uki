@@ -1,0 +1,12 @@
+<div id="toc-div" class="toc-article" <% if (post.encrypt == true) { %>style="display:none" <% } %>>
+	<div class="toc-title">目录</div>
+	<% if (post.encrypt == true) { %>
+		<%- toc(post.origin, {list_number: true}) %>
+	<% } else { %>
+		<% if (post.toc) { %>
+			<%- toc(post.content, {list_number: true}) %>
+		<% } else { %>
+			<div class="toc-empty"><%= theme.emptytoc %></div>
+		<% } %>
+	<% } %>
+</div>

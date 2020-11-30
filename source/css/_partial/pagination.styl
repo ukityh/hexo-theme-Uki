@@ -1,0 +1,50 @@
+.paginator {
+    margin: 0;
+    padding: .3rem 1.1rem 1.2rem;
+    width: 100%;
+    text-align: center;
+}
+
+.paginator .prev, .paginator .next {
+    color: $color-font;
+    display: inline-block;
+    text-decoration: none;
+    line-height: 1.6rem;
+    margin: 0px .2rem;
+    transition-duration: .3s;
+
+    &:hover {
+        color: $color-block;
+    }
+}
+
+.paginator .page-number {
+    display: inline-block;
+    text-decoration: none;
+    margin: 0 .25rem;
+    border-radius: 50%;
+    display: inline-block;
+    line-height: 2rem;
+    min-width: 2rem;
+    color: $color-font;
+    font-size: 1.2rem;
+    transition-duration: .1s;
+
+    &:hover {
+        color: $color-hover
+        background-color: rgba($color-block,$post-hover-opacity);
+        box-shadow: 0px 0px 1rem rgba($color-block,0.4);
+	    transition-duration: .3s;
+        transform: scale(1.02);
+		-webkit-transform: scale(1.02)
+		-ms-transform: scale(1.02)
+		-o-transform: scale(1.02)
+        
+    }
+}
+
+.paginator .current{
+    border: 1px solid $color-font;
+    background-color: rgba($color-block,$post-block-opacity);
+	cursor: pointer;
+}

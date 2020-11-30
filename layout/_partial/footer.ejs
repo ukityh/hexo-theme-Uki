@@ -1,0 +1,58 @@
+<div class="footer">
+	
+	<div class="beian"><a class="beian-link" href="http://beian.miit.gov.cn"><%- theme.footer.beian %></a></div>
+	
+	<p class="footer-p">
+		由<a href="https://hexo.io/" target="_blank" rel="nofollow" >&thinsp;Hexo&thinsp;</a>强力驱动
+	</p>
+	
+	<p class="footer-p">使用<a href="https://www.jsdelivr.com/" target="_blank" rel="nofollow" >&thinsp;jsDelivr&thinsp;</a>加速
+		&nbsp;|&nbsp;
+		图标来自<a href="https://www.iconfont.cn/" target="_blank" rel="nofollow" >&thinsp;iconfont&thinsp;</a>
+	</p>
+
+	<% if(theme.footer.count == true ) { %>
+		<script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+		<p class="footer-p">
+			<i style="font-size:14px; font-weight:bold;" class="iconfont icon-calendar"></i>&thinsp;&thinsp;总字数：<%= totalcount(site) %>
+			&nbsp;|&nbsp;
+			<i style="font-size:18px; font-weight:bold;" class="iconfont icon-visitors"></i>访问量：<span id="busuanzi_value_site_uv"></span>
+		</p>
+	<% } %>
+	
+	<% if(theme.footer.time.use == true) { %>
+		<p class="footer-p"><a href="/" rel="nofollow" class="footer-color"><%= config.title %></a>&thinsp;<%- theme.footer.time.content %>
+			<b id="timer-d"></b>&thinsp;天&thinsp;<b id="timer-h"></b>&thinsp;时&thinsp;<b id="timer-m"></b>&thinsp;分&thinsp;<b id="timer-s"></b>&thinsp;秒。
+			
+		<script>
+		function timer() {
+			var start = new Date('<%- theme.footer.time.start %>');
+			var t = new Date() - start;
+			var h = ~~(t / 1000 / 60 / 60 % 24);
+			if (h < 10) {
+				h = "0" + h;
+			}
+			var m = ~~(t / 1000 / 60 % 60);
+			if (m < 10) {
+				m = "0" + m;
+			}
+		
+			var s = ~~(t / 1000 % 60);
+			if (s < 10) {
+				s = "0" + s;
+			}
+			document.getElementById('timer-d').innerHTML = ~~(t / 1000 / 60 / 60 / 24);
+			document.getElementById('timer-h').innerHTML = h;
+			document.getElementById('timer-m').innerHTML = m;
+			document.getElementById('timer-s').innerHTML = s;
+		}
+		timer();
+		setInterval(timer, 1000);
+		</script></p>
+	<% } %>
+
+	<% if(theme.sakura == true) { %>
+		<%- js('//cdn.jsdelivr.net/gh/small-rose/small-rose.github.io@master/js/sakura.js') %>
+	<% } %>
+	
+</div>

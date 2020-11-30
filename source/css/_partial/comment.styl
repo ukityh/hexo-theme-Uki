@@ -1,0 +1,144 @@
+/* gitalk */
+.markdown-body p {
+	color: $black;
+	if (hexo-config('background.dark.enable')) {
+		color: $white;
+	}
+}
+
+.gt-container .gt-user-inner, .gt-counts {
+	color: $black;
+	if (hexo-config('background.dark.enable')) {
+		color: $white;
+	}
+}
+
+.gt-container .gt-user .gt-ico svg  {
+	fill: #6190e8 !important;
+}
+
+.gt-container .gt-comment-admin .gt-comment-content, .gt-container .gt-header-textarea {
+	background-color: rgba($white, 0.7) !important;
+	if (hexo-config('background.dark.enable')) {
+		background-color: rgba($black, 0.7) !important;
+	}
+}
+
+.gt-container .gt-comment-username {
+	font-size: 15px;
+	font-family: $font-family-post;
+}
+
+
+.gt-container .gt-comment-text, .gt-container .gt-comment-date {
+	font-size: 15px;
+	font-family: $font-family-post;
+	opacity: 0.7;
+	color: $black !important;
+	if (hexo-config('background.dark.enable')) {
+		color: $white !important;
+	}
+}
+
+.gt-container .gt-meta {
+	margin: 1rem 0 1.2rem !important;
+	line-height: 1.8rem;
+	padding: 1rem 0 0 !important;
+	border-bottom: 1px dotted $black !important;
+}
+
+.gt-container .gt-header-controls-tip {
+	position: relative;
+	bottom: .8rem;
+}
+
+.gt-container .gt-avatar img {
+	border: 0 solid #000;
+}
+
+/* valine */
+.v[data-class=v] .vwrap {
+	margin-top: 3rem;
+	border: 1px solid rgba($color-font, 0.2) !important;
+	box-shadow: 1px 0 .5rem rgba($color-font, 0.2);
+}
+
+.v[data-class=v] .vbtn {
+	color: $color-font !important;
+	border-color: rgba($color-font, 0.3) !important;
+	box-shadow: 1px 0 2px rgba($color-font, 0.3);
+	cursor: url($cursor-pointer),auto !important;
+	
+	&:hover {
+		background-color: $color-hover !important;
+		color: $color-block !important;
+	}
+}
+
+.v[data-class=v] .vicon {
+    fill: rgba($color-font, 0.5) !important;
+	transition-duration: .2s;
+	cursor: url($cursor-pointer),auto !important;
+	
+	&:hover {
+		fill: $color-hover !important;
+		opacity: 1;
+	}
+}
+
+.v[data-class=v] .vcards .vcard .vquote {
+    border-left: 0 dashed rgba($color-font, 0.6) !important;
+}
+
+.v[data-class=v] .vcards .vcard .vh {
+	border-bottom: 0 dashed rgba($color-font, 0.6) !important;
+}
+
+.v[data-class=v] .vwrap .vheader .vinput {
+	border-bottom: 1px dashed rgba($color-font, 0.5) !important;
+	cursor: url($cursor-text),auto !important;
+}
+
+.v[data-class=v] .vpower a {
+    font-size: .8rem !important;
+	cursor: url($cursor-pointer),auto;
+}
+
+.v[data-class=v] .vempty {
+	color: rgba($color-font, 0.7) !important;
+}
+
+.v[data-class=v] .status-bar, .v[data-class=v] .veditor, .v[data-class=v] .vinput, .v[data-class=v] p, .v[data-class=v] pre code {
+    color: $color-font !important;
+}
+
+.v[data-class=v] .vsys, .v[data-class=v] .vtime {
+    color: rgba($color-font, 0.7) !important;
+	font-family: $font-family-post;
+}
+
+.v[data-class=v] .vcount {
+	font-family: $font-family-title;
+	font-size: 22px !important;
+    color: $color-font !important;
+	padding: 1rem 0 0 !important;
+}
+
+.v[data-class=v] .vcards .vcard .vh .vmeta .vat {
+	transition-duration: .2s;
+	cursor: url($cursor-pointer),auto !important;
+	
+	&:hover {
+		color: $color-hover !important;
+	}
+}
+
+.v[data-class=v] .vcards .vcard .vhead .vnick {
+    font-size: 1em;
+	font-family: $font-family-post;
+	cursor: url($cursor-pointer),auto !important;
+}
+
+.v[data-class=v] .vcards .vcard .vimg {
+	margin-right: 1rem !important;
+}

@@ -1,0 +1,167 @@
+$background-image-light = hexo-config('background.image')
+$background-image-dark  = hexo-config('background.image-dark');
+$background-image       = $background-image-light
+if (hexo-config('background.dark.enable')) {
+	$background-image   = $background-image-dark  
+}
+
+body {
+	cursor: url($cursor-normal),auto !important;
+	margin: 0;
+}
+
+body:before {
+	content: '';
+	position: fixed;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: url($background-image) 
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+@media screen and (min-width: 1367px) {
+	.container {
+		padding: 0 6%;
+		margin: 0;
+		min-height: 85vh;
+		overflow-x: hidden;
+
+		.aside {
+			float: left;
+			clear: left;
+			width: 16.38%;
+			padding-right: 1%;
+		}
+
+		.content {
+			float: left;
+			width: 82.62%;
+		}
+		
+		.index-content {
+			float: left;
+			width: 60%;
+			padding-right: 0.5%;
+		}
+
+		.index-right {
+			float: right;
+			clear: right;
+			width: 22.12%;
+		}
+	}
+}
+
+@media screen and (max-width: 1367px) {
+	.container {
+		padding: 0 0.1%;
+		min-height: 85vh;
+		overflow-x: hidden;
+
+		.aside {
+			float: left;
+			clear: left;
+			width: 14.5%;
+			padding-right: 0.4%;
+		}
+
+		.content {
+			float: left;
+			width: 85.1%;
+		}
+		
+		.index-content {
+			float: left;
+			width: 60.95%;
+			padding-right: 0.3%;
+		}
+		
+		.index-right {
+			float: right;
+			clear: right;
+			width: 23.85%;
+		}
+	}
+}
+
+@media screen and (max-width: 1024px) {
+	.container {
+		padding: 0;
+		min-height: 85vh;
+		overflow-x: hidden;
+
+		.aside {
+			position: fixed;
+			display: none;
+		}
+
+		.content {
+			float: left;
+			clear: left;
+			width: 100%;
+		}
+
+		.index-right {
+			float: left;
+			clear: right;
+			width: 100%;
+		}
+		
+		.index-content {
+			float: left;
+			clear: left;
+			width: 100%;
+		}
+	}
+}
+
+::-webkit-scrollbar {
+	height: .4rem;
+	width: .5rem;
+}
+
+::-webkit-scrollbar-track {
+	border-radius: .2rem;
+	background-color: rgba($color-block, 0.1);
+}
+
+::-webkit-scrollbar-corner {
+	border-radius: .2rem;
+	background-color: rgba($color-block, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+	border-radius: 2px;
+	background-color: rgba($color-hover, 0.3);
+
+	&:window-inactive {
+	background-color: rgba($color-hover, 0.3);
+  }
+
+	&:hover {
+	background-color: rgba($color-hover, 0.5);
+	}
+
+	&:active {
+    background-color: rgba($color-hover, 0.5);
+	}
+}
+
+.icon-backtotop:before {
+	color: rgba($color-font, 0.5);
+	font-weight: 100;
+	font-size: 2.5rem;
+	position: fixed;
+	right: 2rem;
+	bottom: 1.4rem;
+	cursor: url($cursor-pointer),auto !important;
+	z-index: 999;
+}

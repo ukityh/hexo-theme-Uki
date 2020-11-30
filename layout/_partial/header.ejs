@@ -1,0 +1,42 @@
+<header class="header">
+
+	<div class="header-block">
+		<div class="author">
+		    <div class="author-avatar">
+				<img no-lazy src="<%= url_for(theme.author.avatar) %>" title="<%= config.author %>">
+		    </div>
+			<div><a class="author-name" href="/about" title="About Me"><%= config.author %></a></div>
+		</div>
+		
+		<div><a class="site-subtitle" href="/about/site" title="About Site"><%= config.subtitle %></a></div>
+		
+		<script src="https://cdn.jsdelivr.net/gh/Justlovesmile/CDN/js/typed.js"></script>
+		<div class="site-descr">
+			<span id="descr-typed"></span>
+			<script>
+			var typed = new Typed("#descr-typed", {
+				strings: ['<%= config.description %>'],
+				startDelay: 600,
+				typeSpeed: 60,
+				backSpeed: 20,
+				loop: true,
+				showCursor: true,
+				shuffle: false
+			});
+			</script>
+		</div>
+	
+		<nav class="social">
+			<% for (var site in theme.social){
+				if (theme.social[site]){ %>
+					<a href="<%- theme.social[site] %>" target="_blank" class="social-link" title="<%= site %>">
+						<i style="font-size:22px;" class='iconfont icon-<%= site %>'></i></a>
+				<% }
+			} %>
+		</nav>
+		
+		<a class="link-relay" href="https://travellings.now.sh/" target="blank" title="开往-友链接力"><img no-lazy src="//cdn.jsdelivr.net/gh/volfclub/travellings@master/assets/logo.gif" alt="开往-友链接力" width="65"></a>
+		
+	</div>
+
+</header>

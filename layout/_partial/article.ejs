@@ -1,0 +1,31 @@
+<article class="post">
+	<div class="aside">
+		<%- partial('_partial/_sidebar/sidebar') %>
+	</div>
+
+	<div class="index-content">
+		<div class="post-main">
+			<%- partial('_post/title') %>
+			<%- partial('_post/meta') %>
+			<%- partial('_post/content') %>
+			<%- partial('_post/copyright') %>
+		</div>
+		
+		<% if(post.comment != false) { %>
+			<%- partial('_post/comment') %>
+		<% } %>
+	</div>
+
+	<div class="index-right">
+		<div class="post-toc">
+			<%- partial('_post/toc') %>
+		</div>
+	</div>
+</article>
+
+
+<% if(post.noCopy == true){ %>
+
+	<%- js('//cdn.jsdelivr.net/gh/ukityh/ukityh.github.io@master/js/nocopy.js') %>
+	
+<% } %>

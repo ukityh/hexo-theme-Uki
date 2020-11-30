@@ -1,0 +1,42 @@
+<div class="post-meta">
+	<% if (post.meta != false ) { %>
+		<i style="font-size:16px; font-weight:bold;" class="iconfont icon-calendar"></i>&ensp;发布于&thinsp;<%- date(post.date, "YYYY-MM-DD") %>
+		&ensp;|&ensp;&thinsp;
+		<i style="font-size:16px; font-weight:bold;" class="iconfont icon-calendar"></i>&ensp;更新于&thinsp;<%- date(post.updated, "YYYY-MM-DD") %>
+		
+		<div class="post-count">
+			<i style="font-size:16px;" class="iconfont icon-wordcount"></i>&thinsp;字数:&thinsp;
+			<% if (post.encrypt == true) { %>
+				<%= wordcount(post.origin) %>
+			<% } else { %>
+				<%= wordcount(post.content) %>
+			<% } %>
+		</div>
+		
+		<div class="post-candt">
+			<% if (post.categories && post.categories.length){ %>
+			<span class="post-category">
+				<i style="font-size:14px;" class="iconfont icon-category"></i>
+				<% var categoryPath = []%>
+				<% post.categories.forEach(function(category, i){ categoryPath.push(category.name)%>
+				<span class="candt-name"><%=category.name%></span>
+				<% if (i !== post.categories.length - 1) { %> 
+					<% if (theme.category && theme.category.sub) { %>
+					><%} 
+						else { %>
+					-<% } %> 
+					<% } %>
+				<% }) %>
+				<% } %>
+				&thinsp;
+			<% if (post.tags && post.tags.length){ %>
+			<span class="post-tag">
+				<% post.tags.forEach(function(tag, i){ %>
+					<span class="candt-name">
+				<i style="font-size:14px;" class="iconfont icon-tag"></i><%= tag.name %></span>
+				<% }) %>
+			</span>
+			<% } %>
+		</div>
+	<% } %>
+</div>

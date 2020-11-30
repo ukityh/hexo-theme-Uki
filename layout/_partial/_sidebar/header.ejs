@@ -1,0 +1,23 @@
+<header class="header">
+
+	<table border="0" class="header-block">
+		<tr><td height=40 width=40></td></tr>
+	</table>
+
+    <div class="author">
+	    <div class="author-avatar">
+				<img src="<%= url_for(theme.author.avatar) %>" title="<%= config.author %>">
+	    </div>
+		<div class="author-name"><%= config.author %></div>
+	</div>
+
+	<nav class="social">
+		<% for (var site in theme.social){
+			if (theme.social[site]){ %>
+				<a href="<%- theme.social[site] %>" target="_blank" class="social-link" >
+					<i style="font-size:21px;" class='iconfont icon-<%= site %>'></i></a>
+			<% }
+		} %>
+	</nav>
+
+</header>

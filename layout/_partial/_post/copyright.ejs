@@ -1,0 +1,11 @@
+<div class="post-copyright"">
+	<span>本文字数：
+		<% if (post.encrypt == true) { %>
+		  <%= wordcount(post.origin) %>
+	    <% } else { %>
+		    <%= wordcount(post.content) %>
+	   <% } %></span>
+	<div>本文作者：<%= config.author %></div>
+	<div>本文链接：<a class="copyright-link" href="<%= url_for(post.path) %>"><%= post.permalink %></a></div>
+	<div>版权声明：如无特殊声明，本文则采用<a class="copyright-link" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">&copy;BY-NC-SA 4.0</a>许可协议，转载请标明作者及出处。
+</div>

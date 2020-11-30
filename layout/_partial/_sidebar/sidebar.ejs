@@ -1,0 +1,55 @@
+<nav id="nav" class="sidebar js-sidebar">
+    <div class="sidebar-navbar">
+    	<%- partial('_partial/_sidebar/sum') %>  
+		<div class="navbar-title"><i style="font-size:19px;font-weight:400"class="iconfont icon-castle"></i>&ensp;导&thinsp;航&ensp;<i style="font-size:19px;font-weight:400"class="iconfont icon-castle"></i></div>
+        <ul class="navbar-menu" id='navbar-top'>
+    		<% for (var name in theme.menu) { %>
+                <li class="navbar-menu-item">
+					<% if(theme.menu[name].path) { %>
+					<a href="<%- url_for(theme.menu[name].path) %>"><button class="sidebar-button"><%= name %></button></a>
+					<% } else { %>
+                    <a href="javascript:void(0);" onclick='doMenu(this,"1")'><button class="sidebar-button"><%= name %></button></a>
+					<% } %>
+					
+					<% if (theme.menu[name].submenu){ %>
+                        <ul class="nav-sub" >
+                            <% for (var subname in theme.menu[name].submenu) { %>
+                                <li class="nav-sub-item">
+									<% if(theme.menu[name].submenu[subname].path) { %>
+									<a href="<%- url_for(theme.menu[name].submenu[subname].path) %>"><button class="sidebar-subbutton"><%= subname %></button><a>
+									<% } else { %>
+                                    <a href="javascript:void(0);" onclick='doMenu(this,"2")'><button class="sidebar-subbutton"></i><%= subname %></button></a>
+									<% } %>
+									
+    								<% if (theme.menu[name].submenu[subname].thirdmenu){ %>
+    								<ul class="nav-third">
+    									<% for (var thirdname in theme.menu[name].submenu[subname].thirdmenu) { %>
+    									<li class="nav-sub-item">
+											<% if(theme.menu[name].submenu[subname].thirdmenu[thirdname].path) { %>
+											<a href="<%- url_for(theme.menu[name].submenu[subname].thirdmenu[thirdname].path) %>"><button class="sidebar-thirdbutton"><i class="iconfont icon-star"></i><%= thirdname %>&ensp;</button></a>
+											<% } else { %>
+											<a href="javascript:void(0);" onclick='doMenu(this,"3")'><button class="sidebar-thirdbutton"><i class="iconfont icon-star"></i><%= thirdname %>&ensp;</button></a>
+											<% } %>
+									
+												<% if (theme.menu[name].submenu[subname].thirdmenu[thirdname].fourthmenu){ %>
+												<ul class="nav-fourth">
+    											<% for (var fourthname in theme.menu[name].submenu[subname].thirdmenu[thirdname].fourthmenu) { %>
+    											<li class="nav-sub-item">
+    											<a href="<%- url_for(theme.menu[name].submenu[subname].thirdmenu[thirdname].fourthmenu[fourthname].path) %>"><button class="sidebar-fourthbutton"><u><%= fourthname %></u></button></a>
+    											</li>
+    											<% } %>
+    										</ul>
+    										<% } %>
+    									</li>
+    									<% } %>
+    								</ul>
+    								<% } %>
+                                </li>
+                            <% } %>
+                        </ul>
+                    <% } %>
+                </li>            
+            <% } %>
+        </ul>
+    </div>
+</nav>

@@ -1,0 +1,95 @@
+####################################
+############# 作者信息 ##############
+####################################
+author:
+  avatar: //cdn.jsdelivr.net/gh/ukityh/ukityh.github.io@master/imgs/avatar.jpg
+social:  ## 联系方式,可以更改顺序
+  github:
+  e-mail: mailto:3246928583@qq.com
+  qq: tencent://QQInterLive/?Cmd=2&Uin=3246928583 ##添加好友 ##发起临时会话：tencent://message/?Menu=yes&uin=3246928583&Service=300&sigT=45a1e5847943b64c6ff3990f8a9e644d2b31356cb0b4ac6b24663a3c8dd0f8aa12a595b1714f9d45
+  douban: https://www.douban.com/people/217969319/
+  bilibili: https://space.bilibili.com/3294711
+  twitter:
+  rss:
+
+####################################
+############# 主题风格 ##############
+####################################
+favicon: //cdn.jsdelivr.net/gh/ukityh/ukityh.github.io@master/imgs/avatar.jpg  ##网站图标
+
+background: 
+  image: //cdn.jsdelivr.net/gh/ukityh/ukityh.github.io@master/imgs/background.jpg
+  dark: false  ##暗卡片模式
+  image-dark: //cdn.jsdelivr.net/gh/ukityh/ukityh.github.io@master/imgs/bgdark.jpg  ##暗卡片模式下的背景图片
+  menu-opacity: 0.6   ##主页头部个人信息卡片透明度[0,1],无鼠标悬停透明度
+  block-opacity: 0.3  ##文章卡片透明度[0,1],建议值:[0.2,0.9]
+  hover-opacity: 0.8  ##鼠标悬停文章卡片时的卡片透明度[0,1],以提高阅读体验,建议大于block-opacity
+  
+sakura: true  ## 花瓣飘落效果
+
+cursor: ## 光标
+  normal: //cdn.jsdelivr.net/gh/ukityh/ukityh.github.io@master/imgs/c-normal.cur
+  pointer: //cdn.jsdelivr.net/gh/ukityh/ukityh.github.io@master/imgs/c-pointer.cur
+  text: //cdn.jsdelivr.net/gh/ukityh/ukityh.github.io@master/imgs/c-text.cur
+
+####################################
+############## 导航栏 ##############
+### 请注意同级之间的标点符号和缩进 ####
+####################################
+menu:  ## 多级导航栏配置,可以更改顺序
+  主页: { path: / }
+  归档: { path: /archives }
+  说说: { path: /say }
+  友链: { path: /friends }
+
+emptytoc: 这篇文章没有目录  ##文章目录为空时显示的内容
+
+####################################
+############## 页脚信息 #############
+####################################
+footer:
+  beian:   ## 中国大陆用户备案信息
+  count: true  ## 字数统计 | 网站访客统计(采用不蒜子uv算法)
+  time:  ## 博客运行时间,格式:<博客标题><content>x天x时x分x秒
+   use: true
+   content: 已在世
+   start: 2020/06/14  ## 建站时间,格式:YYYY/MM/DD
+
+#########################################
+#### 以下为插件, 请参考官方文档进行配置 ####
+#########################################
+
+########## Artitalk说说 ##########
+## https://github.com/ArtitalkJS/Artitalk
+artitalk:
+  appID: 
+  appKey: 
+  pageSize: 
+  color1: 
+  color2: 
+  color3:   ## 默认字体颜色为light-黑(选用"#2D2D2D")，dark-白(选用"#F5F5F5")，此选项只能更改图标颜色
+
+############# 评论 ##############
+### 同时选用时以下方顺序依次排序 ###
+
+##### Gitalk评论 #####
+## https://github.com/gitalk/gitalk
+gitalk:
+  use: false
+  clientID: 
+  clientSecret: 
+  repo: 
+  owner: 
+  admin: 
+  perPage: 
+
+##### Valine评论 #####
+## https://valine.js.org/quickstart.html
+valine: 
+  use: false
+  appId: 
+  appKey: 
+  avatar: 
+  placeholder: 
+  guest_info: 
+  pageSize: 

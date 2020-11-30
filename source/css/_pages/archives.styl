@@ -1,0 +1,114 @@
+.page-title {
+	text-align: center;
+	font-size: 1.6rem;
+	font-weight: 700;
+	font-family: $font-family-title;
+	border: 1px dashed $color-font;
+	line-height: 3rem;
+	color: $color-font;
+}
+
+.archive {
+	padding: 1.2rem 4rem 2rem;
+	margin-bottom: 1rem;
+	box-shadow: 0px 0px 1rem rgba($color-block,0.2);
+	background-color: rgba($color-block,$post-block-opacity);
+	transition-duration: .3s;
+	text-align: justify;
+	animation:fadein .2s ease-in;
+	-webkit-animation:fadein .2s ease-in;
+	-moz-animation:fadein .2s ease-in;
+	-o-animation:fadein .2s ease-in;
+	-ms-animation:fadein .2s ease-in;
+
+    &:hover {
+	    background-color: rgba($color-block, $post-hover-opacity);
+        box-shadow: 0px 0px 2.5rem rgba($color-block, 0.6);
+	}
+	
+	@media screen and (max-width: 1024px) {
+		padding: 1.2rem 7% 2rem 7.4%;
+	}
+	
+	@media screen and (max-width: 600px) {
+		padding: 1.2rem 4.6% 2rem 5%;
+	}
+}
+
+.archive-post {
+	list-style: none;
+	padding: 0rem 1rem 1.5rem .3rem;
+	margin: 0;
+		
+	li {
+		font-family: $font-family-post;
+		font-size: 17px;
+		line-height: 2rem;
+		font-weight: 400;
+	}
+	
+	a {
+		color: $color-font;
+		text-decoration: none;
+		transition-duration: .3s;
+	}
+	
+	a:hover {
+		color: $color-hover;
+	}
+	
+	a:active{ 
+		color: $color-active
+	}
+}
+
+.archive-year-item {
+	font-size: 1.8rem;
+	font-family: $font-family-title;
+	font-weight: 100;
+	color: $color-font;
+	margin-top: 1rem;
+	position: relative;
+	right: .3rem;
+}
+
+.archive-post-title {
+	color: $color-font;
+	font-size: 17px;
+	margin: 0 2%;
+	font-family: $font-family-post;
+	font-weight: 400;
+	word-break: break-all;
+	word-wrap:break-word;
+	
+	&:hover {
+		color: $color-hover;
+	}
+}
+
+.archive-descr {
+	position: relative;
+	padding-top: 1rem;
+	color: rgba($color-font, 0.7);
+	font-size: 17px;
+	font-family: $font-family-post;
+	font-weight: 400;
+	
+}
+
+.archive-post-item {
+	padding: .6rem 0 .3rem 0;
+	border-left: 1px dotted $color-font;
+	border-bottom: 1px dotted $color-font;
+	padding-left: 1.2%;
+}
+
+.archive-post-date {
+	font-weight: 400;
+	margin-left: 2%;
+	color: rgba($color-font, 0.4);
+}
+
+.pen {
+	color: $color-font
+}
